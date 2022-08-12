@@ -1,11 +1,21 @@
+<script>
+     
+     window.update = function() {
+  var one = document.getElementById('one'),
+    two = document.getElementById('two');
+
+  two.value = parseInt(one.value) * 2;
+}
+
+</script>
+
 <form action="https://formsubmit.co/choresassorted@gmail.com" method="POST" />
 <input type="hidden" name="_captcha" value="false">
 
 <input type="hidden" name="_subject" value="the new subject!">
 
-<label>07.00</label>
-     <label name="first">     <input type="text" name="name">
-</label>
+<input id="one" type="text" name="one" onchange="update();" />
+<input id="two" type="text" name="two" />
 <input type="submit" value="submit">
 
 </form>
